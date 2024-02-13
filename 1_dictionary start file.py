@@ -23,7 +23,7 @@ print('*****  end section 1 ********')
 print()
 
 
-
+'''
 
 
 print()
@@ -45,7 +45,7 @@ print()
 
 
 
-'''
+
 
 
 
@@ -84,7 +84,7 @@ print()
 print('*****  end section 4 ********')
 print()
 
-'''
+
 
 
 
@@ -97,8 +97,14 @@ print()
 for key in phonebook:
     print(f"name: {key} Phone: {phonebook[key]}")
 
+for values in phonebook.values():
+    print(values)
 
+for k,v in phonebook.items():
+    print(f"name: {k} Phone number: {v}:)")
 
+for item in phonebool.items():
+    print(item)
 
 print()
 print('*****  end section 5 ********')
@@ -114,8 +120,11 @@ print()
 
 
 
+phone = phonebook.get('Chris', '555-5555')
+print(phone)
 
-
+phonebook.clear()
+print(phonebook)
 
 print()
 print('*****  end section 6 ********')
@@ -128,7 +137,8 @@ print('*****  start section 7 - using pop method ********')
 print()
 
 
-
+print(phonebook)
+phone = phonebook.pop('Chris', 'Name not found')
 
 
 
@@ -143,7 +153,10 @@ print('*****  start section 8 - using popitem ********')
 print()
 
 
+phone = phonebook.popitem()
+print(phone)
 
+print(phonebook)
 
 
 
@@ -151,15 +164,19 @@ print()
 print('*****  end section 8 ********')
 print()
 
-
+'''
 
 print()
 print('*****  start section 9 - using random and converting to list ********')
 print()
 
+list_of_keys = list(phonebook)
+print(list_of_keys)
+random_key = random.choice(list_of_keys)
+print(random_key)
+print(phonebook[random_key])
 
-
-
+print(phonebook[random.choice(list(phonebook))])
 
 print()
 print('*****  end section 9 ********')
