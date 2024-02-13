@@ -21,11 +21,17 @@ print(type(pet_dictionary))
 
 print(pet_dictionary['cat'])
 
-print(person[[]'pets']['cat'])
+print(person['pets']['cat'])
 # use a loop to print out the names of each child
-
+for i in person["children"]:
+    print(i)
 
 
 
 # use a loop to print out the pets in the following format:
 # The type of pet is: dog and the name of the pet is: Fido
+for i in person["pets"]:
+    print(f"The type of pet is: {i}, the name of the pet is: {person['pets'][i]}")
+for i,k in person["pets"].items():
+    print(f"The type of pet is: {i}, the name of the pet is: {k}")
+
