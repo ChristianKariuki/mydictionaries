@@ -207,3 +207,23 @@ ProduceDictionary={
     }
 }
 
+# Function to calculate total for each produce
+def calculate_total(cost, amt_sold):
+    return round(cost * amt_sold, 2)
+
+for produce in ProduceDictionary:
+
+    cost = ProduceDictionary[produce]['cost']
+    amt_sold = ProduceDictionary[produce]['amt_sold']
+    stated_total = ProduceDictionary[produce]['total']
+    
+    calculated_total = calculate_total(cost, amt_sold)
+    
+    if calculated_total != stated_total:
+        print(f"Produce: {produce}")
+        print(f"Stated Total: ${stated_total}")
+        print(f"Calculated Total: ${calculated_total}")
+        print("Discrepancy Detected!")
+        print()
+
+calculate_total(cost, amt_sold)
